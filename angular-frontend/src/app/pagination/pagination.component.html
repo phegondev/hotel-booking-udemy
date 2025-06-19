@@ -1,0 +1,16 @@
+<div>
+    <ul>
+      <li *ngFor="let number of pageNumbers">
+        <button
+          (click)="onPageChange(number)"
+          [ngClass]="{
+            'page-button': true,
+            'current-page': currentPage === number
+          }"
+        >
+          {{ number }}
+        </button>
+      </li>
+    </ul>
+  </div>
+  

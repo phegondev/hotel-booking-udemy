@@ -1,0 +1,75 @@
+<div class="container">
+    <h2>Update Booking</h2>
+  
+    <!-- Display success or error messages -->
+     <p *ngIf="message" class="success">{{message}}</p>
+     <p *ngIf="error" class="error">{{error}}</p>
+  
+    <!-- Display booking details if fetched -->
+    <div *ngIf="!isLoading">
+      <div class="details">
+        <h3>Booking Details</h3>
+        <p><strong>Confirmation Code:</strong> {{ bookingDetails.bookingReference }}</p>
+        <p><strong>Check-in Date:</strong> {{ bookingDetails.checkInDate }}</p>
+        <p><strong>Check-out Date:</strong> {{ bookingDetails.checkOutDate }}</p>
+        <p><strong>Total Price:</strong> {{ bookingDetails.totalPrice }}</p>
+        <p><strong>Payment Status:</strong> {{ bookingDetails.paymentStatus }}</p>
+        <p><strong>Booking Status:</strong> {{ bookingDetails.bookingStatus }}</p>
+  
+        <br />
+        <hr />
+        <br />
+        <h3>Who Made The Booking</h3>
+        <p><strong>First Name:</strong> {{ bookingDetails.user.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ bookingDetails.user.lastName }}</p>
+        <p><strong>Email:</strong> {{ bookingDetails.user.email }}</p>
+        <p><strong>Phone Number:</strong> {{ bookingDetails.user.phoneNumber }}</p>
+  
+        <br />
+        <hr />
+        <br />
+        <h3>Room Details</h3>
+        <p><strong>Type:</strong> {{ bookingDetails.room.type }}</p>
+        <p><strong>Price per Night:</strong> {{ bookingDetails.room.pricePerNight | currency }}</p>
+        <p><strong>Capacity:</strong> {{ bookingDetails.room.capacity }}</p>
+        <p><strong>Description:</strong> {{ bookingDetails.room.description }}</p>
+        <img [src]="bookingDetails.room.imageUrl" alt="Room Image" height="200" />
+      </div>
+  
+      <hr />
+      
+      <!-- Booking Status Update Form -->
+      <h3>Update Status</h3>
+      <div class="form-group">
+        <label for="bookingStatus">Booking Status</label>
+        <select id="bookingStatus" name="bookingStatus" [(ngModel)]="formState.bookingStatus" (change)="handleChange($event)">
+          <option value="">Select</option>
+          <option value="BOOKED">BOOKED</option>
+          <option value="CANCELLED">CANCELLED</option>
+          <option value="CHECKED_IN">CHECKED IN</option>
+          <option value="CHECKED_OUT">CHECKED OUT</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="paymentStatus">Payment Status</label>
+        <select id="paymentStatus" name="paymentStatus" [(ngModel)]="formState.paymentStatus" (change)="handleChange($event)">
+          <option value="">Select</option>
+          <option value="PENDING">PENDING</option>
+          <option value="COMPLETED">COMPLETED</option>
+          <option value="FAILED">FAILED</option>
+          <option value="REFUNDED">REFUNDED</option>
+          <option value="REVERSED">REVERSED</option>
+        </select>
+      </div>
+  
+      <!-- Update Button -->
+      <button (click)="handleUpdate()">Update Booking</button>
+    </div>
+  
+    <!-- Loading state -->
+    <div *ngIf="isLoading">
+      <p>Loading booking details...</p>
+    </div>
+  </div>
+  

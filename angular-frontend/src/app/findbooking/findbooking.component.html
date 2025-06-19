@@ -1,0 +1,51 @@
+<div class="container">
+    <!-- Error Message -->
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+  
+    <h2>Find Booking</h2>
+  
+    <!-- Search Section -->
+    <div>
+      <input
+        type="text"
+        placeholder="Enter your booking confirmation code"
+        [(ngModel)]="confirmationCode"
+        required
+      />
+      <button (click)="handleSearch()">Find</button>
+    </div>
+  
+    <!-- Booking Details -->
+    <div *ngIf="bookingDetails" class="details">
+      <h3>Booking Details</h3>
+      <p><strong>Booking Code:</strong> {{ bookingDetails.bookingReference }}</p>
+      <p><strong>Check-in Date:</strong> {{ bookingDetails.checkInDate }}</p>
+      <p><strong>Check-out Date:</strong> {{ bookingDetails.checkOutDate }}</p>
+      <p><strong>Payment Status:</strong> {{ bookingDetails.paymentStatus }}</p>
+      <p><strong>Amount:</strong> {{ bookingDetails.totalPrice }}</p>
+      <p><strong>Booking Status:</strong> {{ bookingDetails.bookingStatus }}</p>
+  
+      <hr />
+      <h3>Booker Details</h3>
+      <div>
+        <p><strong>First Name:</strong> {{ bookingDetails.user.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ bookingDetails.user.lastName }}</p>
+        <p><strong>Email:</strong> {{ bookingDetails.user.email }}</p>
+        <p>
+          <strong>Phone Number:</strong> {{ bookingDetails.user.phoneNumber }}
+        </p>
+      </div>
+  
+      <hr />
+      <h3>Room Details</h3>
+      <div>
+        <p><strong>Room Number:</strong> {{ bookingDetails.room.roomNumber }}</p>
+        <p><strong>Room Type:</strong> {{ bookingDetails.room.type }}</p>
+        <p><strong>Room Capacity:</strong> {{ bookingDetails.room.capacity }}</p>
+        <img [src]="bookingDetails.room.imageUrl" alt="Room Image" />
+      </div>
+    </div>
+  </div>
+  

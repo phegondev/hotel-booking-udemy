@@ -1,0 +1,43 @@
+.admin {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #007F86;
+}
+
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+button {
+    padding: 15px 30px;
+    font-size: 1em;
+    color: white;
+    background-color: #007F86;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+button:hover {
+    background-color: rgb(34, 80, 128);
+}

@@ -1,0 +1,40 @@
+div {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+
+li {
+    margin: 0 5px;
+}
+
+
+.page-button {
+    background-color: #fff;
+    color: #007F86;
+    border: 1px solid #007F86;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.page-button:hover {
+    background-color: rgb(34, 80, 128);
+    color: #fff;
+}
+
+
+.current-page {
+    background-color: #007F86;
+    color: #fff;
+}

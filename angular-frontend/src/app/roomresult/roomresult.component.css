@@ -1,0 +1,59 @@
+section {
+    display: block;
+    flex-wrap: wrap;
+    margin: 10px 30px;
+}
+
+
+.item {
+    width: calc(95% - 20px);
+    height: 20vh;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+
+img {
+    width: 20%;
+    /* Adjust image width */
+    height: 20vh;
+}
+
+
+.details {
+    flex: 1;
+    /* Take remaining space */
+    padding: 15px;
+    margin-left: 10px;
+}
+
+
+h3 {
+    color: #007F86;
+}
+
+
+.book-now {
+    align-self: center;
+}
+
+
+button{
+    background-color: #007F86;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+button:hover {
+    background-color: rgb(34, 80, 128)
+}

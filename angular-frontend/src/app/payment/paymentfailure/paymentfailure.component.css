@@ -1,0 +1,31 @@
+div {
+    text-align: center;
+    padding: 50px;
+    background-color: #fce4e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+h1 {
+    color: #f44336;
+  }
+  
+ p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+  }
+  
+a:hover {
+    background-color: #e53935;
+  }
+  

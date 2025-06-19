@@ -1,0 +1,39 @@
+<!-- Error Message -->
+<p *ngIf="error" class="error">{{ error }}</p>
+<div class="container">
+  <!-- Check-in Date Picker -->
+  <div class="field">
+    <label>Check-in Date</label>
+    <input
+      type="date"
+      [(ngModel)]="startDate"
+      [min]="minDate"
+      placeholder="Select Check-In Date"
+    />
+  </div>
+
+  <!-- Check-out Date Picker -->
+  <div class="field">
+    <label>Check-Out Date</label>
+    <input
+      type="date"
+      [(ngModel)]="endDate"
+      [min]="startDate"
+      placeholder="Select Check-Out Date"
+    />
+  </div>
+
+  <!-- Room Type Selection -->
+  <div class="field">
+    <label>Room Type</label>
+    <select [(ngModel)]="roomType">
+      <option disabled value="">Select Room Type</option>
+      <option *ngFor="let type of roomTypes" [value]="type">
+        {{ type }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Search Button -->
+  <button (click)="handleSearch()">Search Rooms</button>
+</div>

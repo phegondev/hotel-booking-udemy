@@ -1,0 +1,39 @@
+<div class="container">
+    <div *ngIf="error" class="error">{{ error }}</div>
+      <h2>All Bookings</h2>
+    
+      <!-- Search bar to filter bookings -->
+      <div class="search">
+        <label>Filter by Booking Number:</label>
+        <input
+          type="text"
+          [(ngModel)]="searchTerm"
+          (input)="handleSearchChange()"
+          placeholder="Enter booking number"
+        />
+      </div>
+    
+      <!-- Display bookings for the current page -->
+      <div class="results">
+        <div *ngFor="let booking of currentBookings" class="result-item">
+          <p><strong>Booking Code:</strong> {{ booking.bookingReference }}</p>
+          <p><strong>Check In Date:</strong> {{ booking.checkInDate }}</p>
+          <p><strong>Check Out Date:</strong> {{ booking.checkOutDate }}</p>
+          <p><strong>Total Price:</strong> {{ booking.totalPrice }}</p>
+          <p><strong>Payment Status:</strong> {{ booking.paymentStatus }}</p>
+          <p><strong>Booking Status:</strong> {{ booking.bookingStatus }}</p>
+          <button (click)="manageBooking(booking.bookingReference)">
+            Manage Booking
+          </button>
+        </div>
+      </div>
+    
+      <!-- Pagination Component -->
+      <app-pagination
+        [roomPerPage]="bookingsPerPage"
+        [totalRooms]="filteredBookings.length"
+        [currentPage]="currentPage"
+        (paginate)="onPageChange($event)"
+      ></app-pagination>
+    </div>
+    

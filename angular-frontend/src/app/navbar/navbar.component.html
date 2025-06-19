@@ -1,0 +1,18 @@
+<nav>
+    <div class="brand">
+        <a href="/home">Phegon Hotel</a>
+    </div>
+    <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/rooms" routerLinkActive="active">Rooms</a></li>
+        <li><a routerLink="/find-booking" routerLinkActive="active">Find Booking</a></li>
+
+
+        <li *ngIf="isCustomer"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+        <li *ngIf="isAdmin"><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
+        <li *ngIf="!isAuthemticated"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li *ngIf="!isAuthemticated"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+
+        <li *ngIf="isAuthemticated" (click)="handleLogout()">Logout</li>
+    </ul>
+</nav>

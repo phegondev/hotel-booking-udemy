@@ -1,0 +1,158 @@
+/* General Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2,
+h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h3 {
+    font-size: 24px;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Success and Error Messages */
+.success {
+    color: #27ae60;
+    background-color: #e8f6ef;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #27ae60;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #e74c3c;
+    background-color: #fdedec;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e74c3c;
+    margin-bottom: 20px;
+}
+
+/* Details Section */
+.details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.details p {
+    margin: 10px 0;
+}
+
+.details img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Loading State */
+.isLoading {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .details img {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}

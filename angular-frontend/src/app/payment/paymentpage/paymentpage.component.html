@@ -1,0 +1,20 @@
+<div class="payment">
+    <div *ngIf="error" class="error">{{ error }}</div>
+  
+  
+    <h3>Complete Your Payment</h3>
+    
+    <strong>Amount to Pay: ${{ amount?.toFixed(2) }}</strong>
+  
+    <form (ngSubmit)="handleSubmit($event)">
+     
+        <div id="card-element" class="card-element">
+        <!-- Stripe Card Element will be inserted here -->
+      </div>
+  
+      <button [disabled]="processing || !stripe" type="submit">
+        {{ processing ? "Processing..." : "Pay Now" }}
+      </button>
+    </form>
+  </div>
+  

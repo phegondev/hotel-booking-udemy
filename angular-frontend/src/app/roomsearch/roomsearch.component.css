@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin-left: 45px;
+}
+
+
+.field {
+    flex: 0 0 calc(25% - 10px);
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #666;
+}
+
+
+.field input,
+.field select {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+
+
+button {
+    margin-left: 10px;
+    padding: 15px 20px;
+    background-color: #007F86;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
+button:hover {
+    background-color: rgb(34, 80, 128)
+}
